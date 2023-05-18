@@ -4,7 +4,7 @@ const app = express();
 
 
 //MIDDLEWARE
-app.use(express.static('public')); //se tiene la carpeta public como recurso estático para poder consumirlo
+app.use(express.static(path.join(__dirname,'public'))); //se tiene la carpeta public como recurso estático para poder consumirlo
 app.listen(process.env.PORT || 3001, () => {console.log("servidor corriendo en el puerto 3001")});
 
 /*app.use(express.urlencoded({extended:false}));*/
